@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import numpy as np
 import tensorflow as tf
 import tensorflow_datasets as tfds
 
@@ -46,12 +47,18 @@ model.compile(
     metrics=[tf.keras.metrics.SparseCategoricalAccuracy()],
 )
 
-model.fit(
-    ds_train,
-    epochs=6,
-    validation_data=ds_test,
-)
+# model.fit(
+#     ds_train,
+#     epochs=6,
+#     validation_data=ds_test,
+# )
 
+x = np.linspace(0, 1, num=101)
+y = np.cos(2*np.pi*x)
+plt.figure()
+plt.plot(x, y, "-")
+plt.title("Actual: {}, predicted: {}".format(1, 2))
+plt.savefig('example.png')
 
 from IPython.display import Image
-Image(
+Image("example.png")
