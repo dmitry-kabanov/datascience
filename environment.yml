@@ -1,0 +1,17 @@
+name: datascience
+
+channels:
+  - apple
+  - conda-forge
+
+dependencies:
+  - python=3.10
+  - pip
+  - ipython
+  - ipykernel
+  - tensorflow-deps
+  - matplotlib
+  - scikit-learn
+  - pip:
+    - tensorflow-macos
+    - tensorflow-metal
