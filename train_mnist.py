@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 import tensorflow as tf
 import tensorflow_datasets as tfds
 
@@ -50,3 +51,7 @@ model.fit(
     epochs=6,
     validation_data=ds_test,
 )
+
+
+from IPython.display import Image
+Image(
