@@ -1,0 +1,6 @@
+# Ignore autoenv files.
+autoenv-enter.zsh
+autoenv-leave.zsh
+
+# Ignore generated artifacts.
+_output/*
